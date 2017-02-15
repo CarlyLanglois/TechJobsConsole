@@ -13,14 +13,16 @@ namespace TechJobsConsole
         public static List<Dictionary<string, string>> findAll()
         {
             loadData();
-            return allJobs;
+    
+            // Bonus mission: return a copy
+            return new List<Dictionary<string, string>>(allJobs);
         }
 
         /*
          * Returns a list of all values contained in a given column,
          * without duplicates. 
          */
-        public static List<string> findAll(string field)
+        public static List<string> findAll(string column)
         {
             loadData();
 
@@ -28,17 +30,23 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> job in allJobs)
             {
-                string aValue = job[field];
+                string aValue = job[column];
 
                 if (!values.Contains(aValue))
                 {
                     values.Add(aValue);
                 }
             }
+
+            // Bonus mission: sort results alphabetically
+            values.Sort();
             return values;
         }
 
-        public static List<Dictionary<string, string>> findByKeyAndValue(string key, string value)
+        /**
+         * Search all columns for the given term
+         */
+        public static List<Dictionary<string, string>> findByValue(string value)
         {
             // load data, if not already loaded
             loadData();
@@ -47,9 +55,43 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> row in allJobs)
             {
-                string aValue = row[key];
 
-                if (aValue.Contains(value))
+                foreach (string key in row.Keys)
+                {
+                    string aValue = row[key];
+
+                    if (aValue.ToLower().Contains(value.ToLower()))
+                    {
+                        jobs.Add(row);
+
+                        // Finding one field in a job that matches is sufficient
+                        break;
+                    }
+                }
+            }
+
+            return jobs;
+        }
+
+        /**
+         * Returns results of search the jobs data by key/value, using
+         * inclusion of the search term.
+         *
+         * For example, searching for employer "Enterprise" will include results
+         * with "Enterprise Holdings, Inc".
+         */
+        public static List<Dictionary<string, string>> findByColumnAndValue(string column, string value)
+        {
+            // load data, if not already loaded
+            loadData();
+
+            List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
+
+            foreach (Dictionary<string, string> row in allJobs)
+            {
+                string aValue = row[column];
+
+                if (aValue.ToLower().Contains(value.ToLower()))
                 {
                     jobs.Add(row);
                 }
