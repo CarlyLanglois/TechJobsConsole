@@ -28,19 +28,19 @@ namespace TechJobsConsole
             while (true)
             {
 
-                string actionChoice = getUserSelection("View Jobs", actionChoices);
+                string actionChoice = GetUserSelection("View Jobs", actionChoices);
 
                 if (actionChoice.Equals("list"))
                 {
-                    string columnChoice = getUserSelection("List", columnChoices);
+                    string columnChoice = GetUserSelection("List", columnChoices);
 
                     if (columnChoice.Equals("all"))
                     {
-                        printJobs(JobData.findAll());
+                        PrintJobs(JobData.FindAll());
                     }
                     else
                     {
-                        List<string> results = JobData.findAll(columnChoice);
+                        List<string> results = JobData.FindAll(columnChoice);
 
                         Console.WriteLine("\n*** All " + columnChoices[columnChoice] + " Values ***");
                         foreach (string item in results)
@@ -52,7 +52,7 @@ namespace TechJobsConsole
                 else // choice is "search"
                 {
                     // How does the user want to search (e.g. by skill or employer)
-                    string columnChoice = getUserSelection("Search", columnChoices);
+                    string columnChoice = GetUserSelection("Search", columnChoices);
 
                     // What is their search term?
                     Console.WriteLine("\nSearch term: ");
@@ -61,12 +61,12 @@ namespace TechJobsConsole
                     // Fetch results
                     if (columnChoice.Equals("all"))
                     {
-                        printJobs(JobData.findByValue(searchTerm));
+                        PrintJobs(JobData.FindByValue(searchTerm));
                     }
                     else
                     {
-                        List<Dictionary<string, string>> searchResults = JobData.findByColumnAndValue(columnChoice, searchTerm);
-                        printJobs(searchResults);
+                        List<Dictionary<string, string>> searchResults = JobData.FindByColumnAndValue(columnChoice, searchTerm);
+                        PrintJobs(searchResults);
                     }
                 }
             }
@@ -75,7 +75,7 @@ namespace TechJobsConsole
         /*
          * Returns the key of the selected item from the choices Dictionary
          */
-        private static string getUserSelection(string choiceHeader, Dictionary<string, string> choices)
+        private static string GetUserSelection(string choiceHeader, Dictionary<string, string> choices)
         {
             int choiceIdx;
             bool isValidChoice = false;
@@ -114,7 +114,7 @@ namespace TechJobsConsole
             return choiceKeys[choiceIdx];
         }
 
-        private static void printJobs(List<Dictionary<string, string>> someJobs)
+        private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
             if (someJobs.Count == 0)
             {
