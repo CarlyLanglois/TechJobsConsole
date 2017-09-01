@@ -1,32 +1,61 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B0E290C0-AB84-4024-B1D7-79F1B54E3B42}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BA058F2-5811-4E60-B81A-531C7125F721}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechJobsConsole", "src\TechJobsConsole\TechJobsConsole.csproj", "{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TechJobsConsole", "src\TechJobsConsole\TechJobsConsole.xproj", "{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backup", "Backup", "{5FE898E3-6C79-4533-B278-28EDA5D8F73B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CBD1377F-F233-4517-8D46-76F6E5B3F119}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechJobsConsole", "Backup\src\TechJobsConsole\TechJobsConsole.csproj", "{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Debug|x64.Build.0 = Debug|Any CPU
+		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Debug|x86.Build.0 = Debug|Any CPU
 		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Release|x64.ActiveCfg = Release|Any CPU
+		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Release|x64.Build.0 = Release|Any CPU
+		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Release|x86.ActiveCfg = Release|Any CPU
+		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7}.Release|x86.Build.0 = Release|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Debug|x64.Build.0 = Debug|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Debug|x86.Build.0 = Debug|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Release|x64.ActiveCfg = Release|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Release|x64.Build.0 = Release|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Release|x86.ActiveCfg = Release|Any CPU
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{56A0A280-DB0E-442D-A1CE-2D8C15EEB4D7} = {B0E290C0-AB84-4024-B1D7-79F1B54E3B42}
+		{CBD1377F-F233-4517-8D46-76F6E5B3F119} = {5FE898E3-6C79-4533-B278-28EDA5D8F73B}
+		{FC7E5CB8-D38E-4B8B-96F3-081EADDC29EF} = {CBD1377F-F233-4517-8D46-76F6E5B3F119}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EB6DD67-E49F-4885-88DD-CE87B806E285}
 	EndGlobalSection
 EndGlobal
