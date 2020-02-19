@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>TechJobsConsole</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>TechJobsConsole</PackageId>
@@ -11,13 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="job_data.csv" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
+    <EmbeddedResource Remove="job_data.csv" />
   </ItemGroup>
-
   <ItemGroup>
-    <EmbeddedResource Update="job_data.csv">
+    <None Update="job_data.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </None>
   </ItemGroup>
-
 </Project>
